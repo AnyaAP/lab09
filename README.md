@@ -1,6 +1,45 @@
 ## Laboratory work IX
+ Разработчики Github реализовали новую функцию Releases для удобного распространения ПО конечным пользователям. Зайдя в раздел Releases, пользователь всегда может найти последнюю версию программы и полную историю версий.
 
-Данная лабораторная работа посвещена изучению процесса создания артефактов на примере **Github Release**
+# Homework
+
+После того, как вы настроили взаимодействие с системой непрерывной интеграции,
+обеспечив автоматическую сборку и тестирование ваших изменений, стоит задуматься
+о создание пакетов для измениний, которые помечаются тэгами (см. вкладку releases).
+Пакет должен содержать приложение solver из предыдущего задания Таким образом, каждый новый релиз будет состоять из следующих компонентов:
+
+    архивы с файлами исходного кода (.tar.gz, .zip)
+    пакеты с бинарным файлом solver (.deb, .rpm, .msi, .dmg)
+
+##Установка github-release:
+
+    Скачать архив go
+
+    Установить его
+```
+$ tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
+$ export PATH=$PATH:/usr/local/go/bin
+$ go version
+```
+    Поставить github-release
+```
+$ go get github.com/github-release/github-release
+$ alias github-release=~/go/bin/github-release
+```
+    Проверить что он работает
+```
+$ github-release info -u ${GITHIUB_USERNAME} -r lab06
+
+$ cmake -H. -B_build $ cmake --build _build $ cd _build $ cpack -G "TGZ" $ cd ..
+
+$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ" $ cmake --build _build --target package
+
+$ mkdir artifacts $ mv _build/*.tar.gz artifacts $ tree artifacts
+
+```
+
+
+  # Данная лабораторная работа посвещена изучению процесса создания артефактов на примере **Github Release**
 
 ```sh
 $ open https://help.github.com/articles/creating-releases/
