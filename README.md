@@ -28,7 +28,7 @@ $ alias github-release=~/go/bin/github-release
 ```
     Проверить что он работает
 ```
-$ github-release info -u ${GITHIUB_USERNAME} -r lab06
+$ github-release info -u ${GITHIUB_USERNAME} -r lab09
 
 $ cmake -H. -B_build 
 $ cmake --build _build $ cd _build $ cpack -G "TGZ" 
