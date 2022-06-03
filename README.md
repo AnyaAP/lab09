@@ -30,11 +30,35 @@ $ alias github-release=~/go/bin/github-release
 ```
 $ github-release info -u ${GITHIUB_USERNAME} -r lab06
 
-$ cmake -H. -B_build $ cmake --build _build $ cd _build $ cpack -G "TGZ" $ cd ..
+$ cmake -H. -B_build 
+$ cmake --build _build $ cd _build $ cpack -G "TGZ" 
+$ cd ..
 
-$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ" $ cmake --build _build --target package
+$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ" 
+$ cmake --build _build --target package
 
-$ mkdir artifacts $ mv _build/*.tar.gz artifacts $ tree artifacts
+$ mkdir artifacts $ mv _build/*.tar.gz artifacts 
+$ tree artifacts
+
+```
+
+Generators
+```
+  7Z                           = 7-Zip file format
+  DEB                          = Debian packages
+  External                     = CPack External packages
+  IFW                          = Qt Installer Framework
+  NSIS                         = Null Soft Installer
+  NSIS64                       = Null Soft Installer (64-bit)
+  NuGet                        = NuGet packages
+  RPM                          = RPM packages
+  STGZ                         = Self extracting Tar GZip compression
+  TBZ2                         = Tar BZip2 compression
+  TGZ                          = Tar GZip compression
+  TXZ                          = Tar XZ compression
+  TZ                           = Tar Compress compression
+  TZST                         = Tar Zstandard compression
+  ZIP                          = ZIP file format
 
 ```
 
